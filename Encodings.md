@@ -31,7 +31,7 @@ intended to be the simplest encoding.  Values are encoded back to back.
 
 The plain encoding is used whenever a more efficient encoding can not be used. It
 stores the data in the following format:
- - BOOLEAN: [Bit Packed](#RLE), LSB first
+ - BOOLEAN: [Bit Packed](#RLE), with the crucial exception that <length> and <bit-packed-header> are NOT needed, just write the TRUE and FALSE as bits, LSB first, 
  - INT32: 4 bytes little endian
  - INT64: 8 bytes little endian
  - INT96: 12 bytes little endian (deprecated)
